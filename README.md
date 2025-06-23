@@ -1,12 +1,23 @@
-# React + Vite
+Spin Wheel Popup Component (arnav)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Project Structure
 
-Currently, two official plugins are available:
+*App.jsx
+Contains the main React component. It defines the spin wheel logic, rendering, and reward calculation.
+The popup appears with animation, includes a spin limit, and supports a close (X) button.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+*styles.css
+Contains all styling for the popup, wheel layout, spin button, and animations.
+Designed to be lightweight, transparent, and overlay on top of any existing UI.
 
-## Expanding the ESLint configuration
+Integration Notes for Backend
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Import App.jsx into the main layout or homepage container.
+
+Ensure styles.css is imported once globally (or locally in App.jsx).
+
+The component is self-contained and triggers automatically when loaded.
+
+To send reward results to backend, insert an API call inside the getResult() method in App.jsx.
+
+No extra configuration or dependencies are needed beyond React and CSS.
